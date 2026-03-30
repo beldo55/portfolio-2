@@ -1,6 +1,7 @@
 import './globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import PaystackBtn from './components/paystackbtn';
 
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import Link from 'next/link';
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link className="small" href="#!">Terms</Link>
                 <span className="mx-1">·</span>
                 <Link className="small" href="/contact">Contact</Link>
+                {/* <PaystackBtn /> */}
               </div>
             </div>
           </div>

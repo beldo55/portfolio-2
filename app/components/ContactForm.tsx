@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { sendEmail } from "../actions";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -15,15 +16,19 @@ export default function ContactForm() {
       name: (form.querySelector('input[name="name"]') as HTMLInputElement).value,
       email: (form.querySelector('input[name="email"]') as HTMLInputElement).value,
       phone: (form.querySelector('input[name="phone"]') as HTMLInputElement).value,
+      subject: (form.querySelector('textarea[name="subject"]') as HTMLTextAreaElement).value,
       message: (form.querySelector('textarea[name="message"]') as HTMLTextAreaElement).value,
     };
 
-    await fetch("/api/send-email", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-
+    const result = await sendEmail(data);
     setLoading(false);
+    if (result.success === true) {
+      alert("Email sent successfully!");
+      form.reset();
+    } else {
+      alert("Failed to send email. Please try again later.");
+    }
+    
   };
 
   return (
@@ -42,9 +47,13 @@ export default function ContactForm() {
         <input name="phone" className="form-control" required />
         <label>Phone</label>
       </div>
+       <div className="form-floating mb-3">
+        <textarea name="subject" className="form-control" style={{ height: "10rem" }} required />
+        <label>Subject</label>
+      </div>
 
       <div className="form-floating mb-3">
-        <textarea name="message" className="form-control" style={{ height: "10rem" }} />
+        <textarea name="message" className="form-control" style={{ height: "10rem" }} required />
         <label>Message</label>
       </div>
 

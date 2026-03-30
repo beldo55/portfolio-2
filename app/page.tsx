@@ -49,6 +49,7 @@ export default function HomePage() {
                     alt="Josiah Likita" 
                     width={400} 
                     height={400} 
+                    priority
                   />
                 </div>
               </div>
