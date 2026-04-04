@@ -1,0 +1,67 @@
+src/
+│
+├── app/                     # App Router (pages & routes)
+│   ├── layout.tsx
+│   ├── page.tsx             # Home page
+│   ├── projects/            # Projects page
+│   │   └── page.tsx
+│   ├── contact/
+│   │   └── page.tsx
+│   └── api/                 # API routes (backend inside Next.js)
+│       └── portfolio/
+│           └── route.ts
+│
+├── components/              # Reusable UI components (View layer)
+│   ├── ui/                  # Buttons, cards, inputs
+│   ├── layout/              # Navbar, Footer
+│   ├── sections/            # Hero, Projects, Contact sections
+│   │   └── PortfolioHero.tsx
+│
+├── models/                  # TypeScript models (MVC → Model)
+│   └── portfolio.ts
+│
+├── services/                # Business logic / API calls (Controller)
+│   └── portfolioService.ts
+│
+├── lib/                     # Utilities & configs
+│   ├── db.ts                # MongoDB connection
+│   ├── helpers.ts
+│
+├── hooks/                   # Custom React hooks
+│   └── usePortfolio.ts
+│
+├── data/                    # Static/mock data (optional)
+│   └── portfolio.ts
+│
+├── styles/                  # Global styles (if not Tailwind only)
+│   └── globals.css
+│
+├── assets/                  # Images, icons
+│
+└── types/ (optional)        # Alternative to models/
+
+
+
+/app
+  /api
+    /profile
+    /portfolio
+  page.tsx
+
+/components
+  Hero.tsx
+  Portfolio.tsx
+
+/models
+  Profile.ts
+  Portfolio.ts
+  Skill.ts
+  Service.ts
+  Testimonial.ts
+
+/data
+  profile.ts
+  portfolio.ts
+
+/public
+  /images
