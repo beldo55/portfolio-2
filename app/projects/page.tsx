@@ -8,7 +8,8 @@ const projects = [
     description: 'A full-stack learning platform where users can search and apply for courses. Built with Next.js, Redux Toolkit, and Node.js backend. Features include authentication, course filtering, and a scalable API structure.', 
     tech: ['Next.js', 'Redux Toolkit', 'Node.js', 'Express', 'PostgreSQL'],
     img: '/assets/tech-academy.png',
-    link: 'https://tech-academy-front-end.vercel.app/'
+    link: 'https://tech-academy-front-end.vercel.app/',
+    backendLink:"https://tech-academy-ten.vercel.app/swagger"
   },
   // { 
   //   id: 2, 
@@ -62,8 +63,8 @@ export default function ProjectsPage() {
                           <Link href={project.link} className="btn btn-primary btn-sm me-2">
                             View Project
                           </Link>
-                          <Link href={project.link} className="btn btn-outline-dark btn-sm">
-                            Source Code
+                          <Link href={project.backendLink} className="btn btn-outline-dark btn-sm">
+                            Swagger Docs
                           </Link>
                         </div>
                       </div>
