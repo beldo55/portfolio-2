@@ -9,7 +9,7 @@ const projects = [
     tech: ['Next.js', 'Redux Toolkit', 'Node.js', 'Express', 'PostgreSQL'],
     img: '/assets/tech-academy.png',
     link: 'https://tech-academy-front-end.vercel.app/',
-    backendLink:"https://tech-academy-ten.vercel.app/swagger"
+    backendLink: 'https://tech-academy-ten.vercel.app/swagger'
   },
   // { 
   //   id: 2, 
