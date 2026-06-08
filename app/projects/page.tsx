@@ -11,14 +11,15 @@ const projects = [
     link: 'https://tech-academy-front-end.vercel.app/',
     backendLink: 'https://tech-academy-ten.vercel.app/swagger'
   },
-  // { 
-  //   id: 2, 
-  //   title: 'Real-Time Chat Application', 
-  //   description: 'A modern chat application with authentication and real-time messaging. Designed with React.js frontend and Node.js backend. Supports user sessions, message handling, and scalable architecture.', 
-  //   tech: ['React.js', 'Node.js', 'Express', 'MongoDB'],
-  //   img: 'https://dummyimage.com/300x400/343a40/6c757d',
-  //   link: 'https://likids-chat.netlify.app/'
-  // },
+  {
+    id: 2,
+    title: 'Apex Zenith (ASP.NET Core)',
+    description: 'A business/agency website with a full content-management admin panel — manage services, team, testimonials, clients, and news from one dashboard. Built on ASP.NET Core MVC with Entity Framework Core and SQL Server, secured with role-based authentication via ASP.NET Identity, and deployed on Render via Docker.',
+    tech: ['ASP.NET Core', 'C#', 'EF Core', 'SQL Server', 'Bootstrap'],
+    img: '/assets/apex.png',
+    link: 'https://apexzenith.onrender.com'
+
+  },
 
 ];
 
@@ -63,9 +64,11 @@ export default function ProjectsPage() {
                           <Link href={project.link} className="btn btn-primary btn-sm me-2">
                             View Project
                           </Link>
-                          <Link href={project.backendLink} className="btn btn-outline-dark btn-sm">
-                            Swagger Docs
-                          </Link>
+                          {project.backendLink && (
+                            <Link href={project.backendLink} className="btn btn-outline-dark btn-sm">
+                              Swagger Docs
+                            </Link>
+                          )}
                         </div>
                       </div>
 
