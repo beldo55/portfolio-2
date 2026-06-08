@@ -43,12 +43,12 @@ export default function HomePage() {
             <div className="col-xxl-7">
               <div className="d-flex justify-content-center mt-5 mt-xxl-0">
                 <div className="profile bg-gradient-primary-to-secondary">
-                  <Image 
-                    className="profile-img" 
-                    src="/assets/profile-7.png" 
-                    alt="Josiah Likita" 
-                    width={400} 
-                    height={400} 
+                  <Image
+                    className="profile-img"
+                    src="/assets/profile-7.png"
+                    alt="Josiah Likita"
+                    width={400}
+                    height={400}
                     priority
                   />
                 </div>
@@ -76,25 +76,25 @@ export default function HomePage() {
                 </p>
 
                 <p className="text-muted">
-                  I specialize in building modern web applications using technologies like 
-                  React, Next.js, Node.js, PostgreSql and MongoDB. I also explore Web3 development using 
+                  I specialize in building modern web applications using technologies like
+                  React, Next.js, Node.js, PostgreSql and MongoDB. I also explore Web3 development using
                   Solidity and blockchain tools.
                   <br /><br />
-                  I have hands-on experience developing real-world projects including a 
-                  learning platform and a real-time chat application. 
+                  I have hands-on experience developing real-world projects including a
+                  learning platform and a real-time chat application.
                   My focus is on writing clean, scalable code and solving real problems with technology.
                 </p>
 
                 {/* SOCIAL LINKS */}
                 <div className="d-flex justify-content-center fs-2 gap-4 mt-4">
-                  <a className="text-gradient" href="#" target="_blank">
+                  <a className="text-gradient" href="https://github.com/beldo55" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i className="bi bi-github"></i>
                   </a>
-                  <a className="text-gradient" href="#" target="_blank">
+                  <a className="text-gradient" href="https://www.linkedin.com/in/josiah-likita-85424b15b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <i className="bi bi-linkedin"></i>
                   </a>
-                  <a className="text-gradient" href="#" target="_blank">
-                    <i className="bi bi-twitter"></i>
+                  <a className="text-gradient" href="https://x.com/josiah_likita" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <i className="bi bi-twitter-x"></i>
                   </a>
                 </div>
 

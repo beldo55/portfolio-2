@@ -11,13 +11,14 @@ export default function ContactForm() {
     setLoading(true);
 
     const form = e.currentTarget;
+    const formData = new FormData(form);
 
     const data = {
-      name: (form.querySelector('input[name="name"]') as HTMLInputElement).value,
-      email: (form.querySelector('input[name="email"]') as HTMLInputElement).value,
-      phone: (form.querySelector('input[name="phone"]') as HTMLInputElement).value,
-      subject: (form.querySelector('textarea[name="subject"]') as HTMLTextAreaElement).value,
-      message: (form.querySelector('textarea[name="message"]') as HTMLTextAreaElement).value,
+      name: String(formData.get("name") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      subject: String(formData.get("subject") ?? ""),
+      message: String(formData.get("message") ?? ""),
     };
 
     const result = await sendEmail(data);
@@ -28,7 +29,6 @@ export default function ContactForm() {
     } else {
       alert("Failed to send email. Please try again later.");
     }
-    
   };
 
   return (
@@ -48,7 +48,7 @@ export default function ContactForm() {
         <label>Phone</label>
       </div>
        <div className="form-floating mb-3">
-        <textarea name="subject" className="form-control" style={{ height: "10rem" }} required />
+        <input name="subject" className="form-control" required />
         <label>Subject</label>
       </div>
 
