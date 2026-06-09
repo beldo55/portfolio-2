@@ -20,6 +20,14 @@ const projects = [
     link: 'https://apexzenith.onrender.com'
 
   },
+{
+  id: 3,
+  title: 'Inventory Management System (ASP.NET Core)',
+  description: 'A backend API for inventory and sales management built with ASP.NET Core (.NET 8) in a clean, layered architecture (API, Application, Core, Infrastructure). Handles products and categories, multi-warehouse stock tracking with audited stock movements, purchases and suppliers, customer sales with transactional, all-or-nothing stock deduction, payments, low-stock email alerts, and a financial dashboard. Secured with JWT and ASP.NET Identity — role-based authorization plus email OTP two-factor authentication. Data access via EF Core on PostgreSQL, containerized with a multi-stage Docker build and deployed on Render.',
+  tech: ['ASP.NET Core', 'C#', 'EF Core', 'PostgreSQL', 'JWT', 'Docker'],
+  img: '/assets/api.png',
+  link: 'https://ibtechaplication-api.onrender.com/swagger/index.html'
+}
 
 ];
 
